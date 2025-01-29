@@ -1,5 +1,5 @@
 {
-  "name": "@x-crypto-trade/raydium-sdk-v2",
+  "name": "@admin-x-crypto-trade/raydium-sdk-v2",
   "version": "0.1.108-alpha",
   "description": "An SDK for building applications on top of Raydium.",
   "license": "GPL-3.0",
