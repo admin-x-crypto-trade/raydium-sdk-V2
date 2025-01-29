@@ -1453,7 +1453,15 @@ export class Clmm extends ModuleBase {
     );
 
     txBuilder.addCustomComputeBudget(computeBudgetConfig);
-    txBuilder.addTipInstruction(txTipConfig);
+
+    if(Array.isArray(txTipConfig)) {
+      for (const config of txTipConfig) {
+        txBuilder.addTipInstruction(config);
+      }
+    } else {
+      txBuilder.addTipInstruction(txTipConfig);
+    }
+
     return txBuilder.versionBuild({ txVersion }) as Promise<MakeTxData<T>>;
   }
 
