@@ -138,7 +138,7 @@ export interface CpmmSwapParams<T = TxVersion.LEGACY> {
     associatedOnly?: boolean;
   };
   computeBudgetConfig?: ComputeBudgetConfig;
-  txTipConfig?: TxTipConfig;
+  txTipConfig?: Array<TxTipConfig> | TxTipConfig;
   txVersion?: T;
 }
 

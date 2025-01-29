@@ -1360,7 +1360,7 @@ export class Clmm extends ModuleBase {
     checkCreateATAOwner?: boolean;
     txVersion?: T;
     computeBudgetConfig?: ComputeBudgetConfig;
-    txTipConfig?: TxTipConfig;
+    txTipConfig?: Array<TxTipConfig> | TxTipConfig;
   }): Promise<MakeTxData<T>> {
     const txBuilder = this.createTxBuilder();
     const baseIn = inputMint.toString() === poolInfo.mintA.address;

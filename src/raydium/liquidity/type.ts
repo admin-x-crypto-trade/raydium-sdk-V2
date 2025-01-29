@@ -275,7 +275,7 @@ export interface SwapParam<T = TxVersion.LEGACY> {
   };
   computeBudgetConfig?: ComputeBudgetConfig;
   txVersion?: T;
-  txTipConfig?: TxTipConfig;
+  txTipConfig?: Array<TxTipConfig> | TxTipConfig;
 }
 
 export type AmmRpcData = ReturnType<typeof liquidityStateV4Layout.decode> & {
